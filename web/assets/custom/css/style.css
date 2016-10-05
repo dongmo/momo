@@ -1,0 +1,12 @@
+/* Override bootstrap style: 3iBusiness: Start */
+hr{
+    border: 1px solid black;
+}
+/* Override bootstrap style: 3iBusiness: End */
+
+
+/* Show content style: Start */
+.row-style{
+    line-height: 3em;
+}
+/* Show content style: End */

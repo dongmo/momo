@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-xs-center" style="margin-top: 100px;">
+            <div class="center-block text-xs-center" style="background-color: rgb(116, 158, 186) !important; border-radius: 10px;">Check Email</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <p>
+                {{ 'resetting.check_email'|trans({'%email%': email}) }}
+            </p>
+        </div>
+    </div>
+{% endblock body %}

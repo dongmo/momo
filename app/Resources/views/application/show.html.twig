@@ -1,0 +1,113 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'application.show.title_bar' |trans}}
+{% endblock %}
+
+{% block body %}
+
+    <section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-after-navbar" id="form1-0" style="background-color: rgb(239, 239, 239);">
+        <div class="mbr-section__container mbr-section__container--std-padding container" style="padding-top: 30px; padding-bottom: 93px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2" data-form-type="formoid">
+                            <div class="mbr-header mbr-header--center mbr-header--std-padding">
+                                <h2 class="mbr-header__text">{{ 'application.show.title'|trans }}</h2>
+                            </div>
+                            <br>
+
+                            <div class="mbr-header mbr-header--center mbr-header--std-padding">
+                                <h4 class="mbr-header__text"> Informations </h4>
+                            </div>
+
+                            <div class="col-md-12 row-style">
+                                <div class="col-md-6">
+                                    <div class="pull-left">{{ 'application.show.name'|trans }}</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pull-right">{{ application.name }}</div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="col-md-12 row-style">
+                                <div class="col-md-6">
+                                    <div class="pull-left">{{ 'application.show.phoneNumber'|trans }}</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pull-right">{{ application.phoneNumber }}</div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="col-md-12 row-style">
+                                <div class="col-md-6">
+                                    <div class="pull-left">{{ 'application.show.activated'|trans }}</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pull-right">{% if application.activated %}Yes{% else %}No{% endif %}</div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="mbr-header mbr-header--center mbr-header--std-padding">
+                                <h4 class="mbr-header__text"> {{ 'application.show.acces'|trans }} </h4>
+                            </div>
+
+                            <div class="col-md-12 row-style">
+                                <div class="col-md-6">
+                                    <div class="pull-left">{{ 'application.show.clientId'|trans }}</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pull-right">{{ application.client.publicId }}</div>
+                                </div>
+                            </div>
+                            <br>
+
+                            <div class="col-md-12 row-style">
+                                <div class="col-md-6">
+                                    <div class="pull-left">{{ 'application.show.clientSecret'|trans }}</div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="pull-right">{{ application.client.secret }}</div>
+                                </div>
+                            </div>
+
+                            <hr>
+                            <div class="mbr-header mbr-header--center mbr-header--std-padding">
+                                <h4 class="mbr-header__text"> {{ 'application.show.status'|trans }} </h4>
+                            </div>
+
+                            <div class="form-group text-center">
+                                <a class="btn btn-default" href="{{ path('application') }}">
+                                    <i class="fa fa-list" aria-hidden="true"></i>
+                                    {{'application.show.return'|trans}}
+                                </a>
+                                <a class="btn btn-success" href="{{ path('application_edit', { 'id':  application.id }) }}">
+                                    <i class="fa fa-pencil" aria-hidden="true"></i>
+                                    {{'application.show.edit'|trans}}
+                                </a>
+                                <a class="btn btn-primary" href="{{ path('application_new') }}">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    {{'application.show.new'|trans}}
+                                </a>
+
+                                <form action="{{ path('application_delete', { 'id': application.id }) }}" method="post" style="display: inline-block">
+                                    <input type="hidden" name="_method" value="DELETE" />
+                                    {{ form_widget(delete_form) }}
+                                    <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure');">
+                                        <i class="fa fa-trash-o"></i>
+                                        {{'application.show.delete'|trans}}
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+

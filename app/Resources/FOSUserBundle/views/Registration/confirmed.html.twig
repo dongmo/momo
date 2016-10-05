@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Successful registration{% endblock %}
+{% trans_default_domain 'FOSUserBundle' %}
+
+{% block body %}
+
+    <section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-after-navbar" id="form1-0" style="background-color: rgb(239, 239, 239);">
+        <div class="mbr-section__container mbr-section__container--std-padding container" style="padding-top: 30px; padding-bottom: 93px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row text-center">
+                        <div class="col-sm-8 col-sm-offset-2" data-form-type="formoid">
+                            <div class="mbr-header mbr-header--center mbr-header--std-padding">
+                                <h2 class="mbr-header__text">Registration</h2>
+                            </div>
+                            <br>
+
+                            {% block fos_user_content %}
+                                <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
+                                {% if targetUrl %}
+                                    <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
+                                {% endif %}
+                            {% endblock fos_user_content %}
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock body %}

@@ -1,0 +1,22 @@
+{# app/Resources/TwigBundle/views/Exception/error404.html.twig #}
+{% extends 'error.base.html.twig' %}
+{% block body %}
+    <div class="row" style="margin-top: 100px;">
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <br/>
+            {# example security usage, see below #}
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                <div class="text-xs-center">
+                    <h2 class="mbr-header__text"><b>Access Denied: what are you looking for boy? :)</b></h2>
+                </div>
+            {% endif %}
+            <h1 class="text-xs-center" style="font-family: 'Rock Salt', cursive; font-size: 15em;">403</h1>
+
+            <div class="text-xs-center">
+                You are not allowed to view this page/resource.
+                <hr>
+                <u>website.com</u>
+            </div>
+        </div>
+    </div>
+{% endblock %}

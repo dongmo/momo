@@ -1,0 +1,10 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+<div class="fos_user_user_show">
+    <p class="mbr-contacts__text"><b>{{ 'profile.show.username'|trans }}</b>: {{ user.username }}</p><br>
+    <p class="mbr-contacts__text"><b>{{ 'profile.show.email'|trans }}</b>: {{ user.email }}</p><br>
+    <p class="mbr-contacts__text"><b>{{ 'profile.show.fullName'|trans }}</b>: {{ user.fullName }}</p><br>
+    <div class="mbr-header mbr-header--center">
+        <a class="btn  text-xs-center"  style="background-color: rgb(116, 158, 186) !important;" href="{{ path('fos_user_profile_edit') }}">{{ 'profile.edit.submit'|trans }}</a>
+    </div>
+</div>

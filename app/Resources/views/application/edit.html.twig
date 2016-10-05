@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'application.edit.title' |trans}}
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .form-control{
+            background-color: #fff;
+        }
+    </style>
+{% endblock %}
+
+{% block body %}
+
+    <section class="mbr-section mbr-section--relative mbr-section--fixed-size mbr-after-navbar" id="form1-0" style="background-color: rgb(239, 239, 239);">
+        <div class="mbr-section__container mbr-section__container--std-padding container" style="padding-top: 30px; padding-bottom: 93px;">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2" data-form-type="formoid">
+                            <div class="mbr-header mbr-header--center mbr-header--std-padding">
+                                <h2 class="mbr-header__text">{{ 'application.edit.title' |trans}}</h2>
+                            </div>
+                            <br>
+
+                            {% if form_errors(edit_form) %}
+                                <div class="alert alert-block alert-error fade in form-errors">
+                                    {{ form_errors(edit_form) }}
+                                </div>
+                            {% endif %}
+
+                            {% for flash_message in app.session.flashbag.get('error') %}
+                                <div class="alert alert-error ">
+                                    {{ flash_message }}
+                                </div>
+                            {% endfor %}
+                            {% for flash_message in app.session.flashbag.get('success') %}
+                                <div class="alert alert-success ">
+                                    {{ flash_message }}
+                                </div>
+                            {% endfor %}
+
+
+                            {{ form_start(edit_form) }}
+
+                            {{ form_widget(edit_form.name) }}
+                            <p>
+                                <button type="submit" class="btn btn-success">
+                                    <i class="fa fa-floppy-o"></i>
+                                    {{'application.show.edit'|trans}}
+                                </button>
+                            </p>
+                            {{ form_end(edit_form) }}
+
+
+                            <div class="form-group">
+                                <a class="btn btn-default" href="{{ path('application') }}">
+                                    <i class="fa fa-list" aria-hidden="true"></i>
+                                    {{'application.edit.return'|trans}}
+                                </a>
+                                <a class="btn btn-primary" href="{{ path('application_new') }}">
+                                    <i class="fa fa-plus" aria-hidden="true"></i>
+                                    {{'application.show.new'|trans}}
+                                </a>
+                                <form action="{{ path('application_delete', { 'id': application.id }) }}" method="post" style="display: inline-block">
+                                    <input type="hidden" name="_method" value="DELETE" />
+                                    {{ form_widget(delete_form) }}
+                                    <button class="btn btn-danger" type="submit" onclick="return confirm('Are you sure');">
+                                        <i class="fa fa-trash-o"></i>
+                                        {{ 'application.index.delete'|trans }}
+                                    </button>
+                                </form>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
+

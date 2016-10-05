@@ -1,0 +1,97 @@
+# Author DassiOrleando
+# English translation strings for website.
+
+# Global strings.
+app_bundle:
+    save: 'Enregistrez'
+    edit: 'Modifiez'
+    close: 'Fermez'
+    show: 'Voir'
+    read_modre: 'Lire plus'
+    by_here: 'Achetez ici'
+    send: 'Envoyez'
+    refresh: 'Actualisez'
+
+# Layout strings
+layout:
+    menu:
+        pricing: 'PRIX'
+        api: 'API'
+        features: 'FONCTIONNALITES'
+        features_menu:
+            rest: 'Rest API'
+            momo: 'MTN MoMo'
+            app: 'Applications'
+            transaction: 'Transactions'
+        contact: 'CONTACT'
+        logout: 'Déconnexion'
+        login: 'Connexion'
+        register: 'Inscription'
+
+# Home strings
+home:
+    title: 'Bienvenue sur l''API Rest de Website!'
+    banner:
+        title: 'Intégrez MoMo facilement dans votre application'
+        sub_title: 'Le paramétrage prend moins de 5 minutes'
+        try_app: 'Testez cette API maintenant'
+        start: 'Commencez'
+    info:
+        title: 'DEVELOPPMENT & PRODUCTION'
+        subtitle: 'Utilisez notre environnement de test avant d''aller en production'
+        content: 'Website fournit aux développeurs une api évolutive disponible par des services REST moderne quelle que soit la technologie que vous utilisez. Notre SDK peut vous aidez avec des exemples pratiques pour une utilisation directe sans modifier.'
+        github_repo: 'Notre page Github avec le SDK.'
+    setup:
+        title: 'Juste 4 étapes avant d''être heureux de ce service, il suffit de suivre avec soin'
+        title1: 'Inscription & Connexion'
+        title2: 'Validez votre compte'
+        title3: 'Créer Application (s)'
+        title4: 'Faire des appels Rest'
+        connection: 'Inscrivez-vous en nous fournissant des informations et vous connecter pour voir votre tableau de bord.'
+        validate: 'Il est nécessaire pour valider votre compte en vérifiant votre numéro de téléphone et adresse e-mail.'
+        application: 'Créer des applications pour communiquer avec cette API, chacune des applications ont des informations d''identification OAuth: les clés et les secrets.'
+        rest: 'Maintenant, vous pouvez appeler nos ressources sans problèmes. Nous espérons que vous apprécierez et comme eux'
+        button: 'EN SAVOIR PLUS'
+
+#Application
+application:
+    new:
+       title: 'Nouvelle Application'
+       name : 'Nom de l''application'
+       phoneNumber: 'Numéro Téléphone de l''application'
+       submit: 'Creer l''Application'
+       return: 'Liste des Applications'
+    show:
+        title_bar: 'Application de l''utilisateur'
+        title: 'Voir Application'
+        name: 'Nom de l''application'
+        phoneNumber: 'Numéro Téléphone'
+        activated: 'Activé'
+        pricing: 'Plan'
+        requests: 'Requêtes Mensuelles'
+        acces: 'Credentials'
+        clientId: 'Client identification'
+        clientSecret: 'Client Secret'
+        return: 'Liste des Applications'
+        edit: 'Edité'
+        new: 'Nouvelle'
+        delete: 'Supprimé'
+        status: 'Status'
+        verifiedPhoneNumber: 'Numéro téléphone vérifié ?'
+        verifiedSetupFees: 'Frais initiaux vérifié ?'
+
+    index:
+         title: 'Liste des Applications'
+         filter : 'Filtre'
+         reset: 'réinitialiser'
+         new: 'Nouvelle'
+         name: 'Nom'
+         phoneNumber: 'Numéro Téléphone'
+         activated: 'Activé'
+         action: 'Action'
+         delete: 'Supprimé'
+    edit:
+        title: 'Edité l''Application'
+        delete: 'Supprimé'
+        edit: 'Edité'
+        return: 'Liste des Applications'

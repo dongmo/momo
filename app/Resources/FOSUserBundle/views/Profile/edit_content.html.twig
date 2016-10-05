@@ -1,0 +1,17 @@
+{% trans_default_domain 'FOSUserBundle' %}
+
+{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+    {#{{ form_widget(form) }}#}
+
+    {#{{ form_widget(form.email, { 'attr': {'placeholder': 'configuration.website'|trans} }) }}#}
+    {#{{ form_widget(form.username, { 'attr': {'placeholder': 'configuration.po_box'|trans} }) }}#}
+    {#{{ form_widget(form.fullName, { 'attr': {'placeholder': 'configuration.ip_adress'|trans} }) }}#}
+
+    <p class="mbr-contacts__text"><b>Email</b>: {{ form_widget(form.email) }}</p><br>
+    <p class="mbr-contacts__text"><b>UserName</b>: {{ form_widget(form.username) }}</p><br>
+    {#<p class="mbr-contacts__text"><b>PWD</b>: {{ form_widget(form.passWord) }}</p><br>#}
+    {{ form_end(form) }}
+
+<div class="row col-md-offset-4">
+    <input type="submit" class="btn  text-xs-center" style="background-color: rgb(116, 158, 186) !important;" value="{{ 'profile.edit.submit'|trans }}" />
+</div>

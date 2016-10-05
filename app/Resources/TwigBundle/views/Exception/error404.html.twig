@@ -1,0 +1,21 @@
+{# app/Resources/TwigBundle/views/Exception/error404.html.twig #}
+{% extends 'error.base.html.twig' %}
+{% block body %}
+    <div class="row" style="margin-top: 100px;">
+        <div class="col-md-8 col-md-offset-2 text-center">
+            <br/>
+            <h2 class="mbr-header__text"><b>Not Found</b></h2>
+            {# example security usage, see below #}
+            {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+                {# ... #}
+            {% endif %}
+            <h1 class="text-xs-center" style="font-family: 'Rock Salt', cursive; font-size: 15em;">404</h1>
+
+            <div class="text-xs-center">
+                Sorry, we cannot seem to find the page or ressource you are looking for !
+                <hr>
+                <u>website.com</u>
+            </div>
+        </div>
+    </div>
+{% endblock %}

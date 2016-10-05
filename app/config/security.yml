@@ -1,0 +1,60 @@
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: sha512
+
+    providers:
+        api_db_provider:
+            id: fos_user.user_provider.username
+        user_provider:
+            id: fos_user.user_provider.username
+
+    role_hierarchy:
+        ROLE_ADMIN:       ROLE_USER # an admin is initially a user and a superadmin is also admin with another rights.
+        ROLE_SUPER_ADMIN: ROLE_ADMIN
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        oauth_token:
+            pattern: ^/oauth/v2/token
+            security: false
+
+        api: # Security mechanisim for the Rest API, so path starting with something like /api/**
+            pattern: ^/api
+            fos_oauth: true
+            stateless: true
+
+        oauth_authorize:
+            pattern: ^/oauth/v2/auth
+            form_login:
+                provider: user_provider
+                check_path: acme_oauth_server_auth_login_check
+                login_path: acme_oauth_server_auth_login
+            anonymous: true
+
+        oauth_token:
+            pattern:    ^/oauth/v2/token
+            security:    false
+
+        apiFireWall:
+            pattern: ^/
+            form_login:
+                provider: api_db_provider
+                csrf_token_generator: security.csrf.token_manager
+            logout: true
+            anonymous: true
+            form_login:
+                login_path: login
+                check_path: login_check
+            logout:
+                path: logout
+                target: /platform
+            # activate different ways to authenticate
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin/, role: ROLE_ADMIN }

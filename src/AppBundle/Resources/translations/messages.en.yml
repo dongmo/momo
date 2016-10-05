@@ -1,0 +1,97 @@
+# Author DassiOrleando
+# English translation strings for website.
+
+# Global strings.
+app_bundle:
+    save: 'Save'
+    edit: 'Edit'
+    close: 'Close'
+    show: 'Show'
+    read_modre: 'Read more'
+    by_here: 'By here'
+    send: 'Send'
+    refresh: 'Refresh'
+
+# Layout strings
+layout:
+    menu:
+        pricing: 'PRICING'
+        api: 'API'
+        features: 'FEATURES'
+        features_menu:
+            rest: 'Rest API'
+            momo: 'MTN MoMo'
+            app: 'Applications'
+            transaction: 'Transactions'
+        contact: 'CONTACT'
+        logout: 'Logout'
+        login: 'Login'
+        register: 'Register'
+
+# Home strings
+home:
+    title: 'Welcome to website''s Rest API!'
+    banner:
+        title: 'Integrate MoMo with ease in your Application'
+        sub_title: 'Setup takes less than 5 minutes'
+        try_app: 'Try this API now'
+        start: 'Getting started'
+    info:
+        title: 'DEVELOPMENT & PRODUCTION'
+        subtitle: 'Use our sandbox before got to production'
+        content: 'Website provides for developers a growing api available via modern Rest Service whatever technology you use. Our SDK can help you with pratical examples for direct use without edit.'
+        github_repo: 'Our Github Page with SDK.'
+    setup:
+        title: 'Just 4 Steps before being happy  of this service, just follow diligently them.'
+        title1: 'Register & Login'
+        title2: 'Validate account'
+        title3: 'Create Application(s)'
+        title4: 'Make Rest calls'
+        connection: 'Register by providing some informations to us and login to see your dashboard.'
+        validate: 'It''s required to validate your account by verifying your phone number and mail adress.'
+        application: 'Create applications to communicate with this API, each apps have OAuth credentials: keys and secrets.'
+        rest: 'Now you can call our resources without problems. Hope you will enjoy and like them'
+        button: 'LEARN MORE'
+
+#Application
+application:
+    new:
+       title: 'New Application'
+       name : 'Name of application'
+       phoneNumber: 'Phone Number  of the application'
+       submit: 'Create Application'
+       return: 'List of Application'
+    show:
+        title_bar: 'Show a User''s application'
+        title: 'Show Application'
+        name: 'Name of application'
+        phoneNumber: 'Phone Number'
+        activated: 'Activated'
+        pricing: 'Plan'
+        requests: 'Monthly Requests'
+        acces: 'Credentials'
+        clientId: 'Identifiant du client'
+        clientSecret: 'Clé secrète du Client'
+        return: 'List of Application'
+        edit: 'Edit'
+        new: 'New'
+        delete: 'Delete'
+        status: 'Status'
+        verifiedPhoneNumber: 'Phone number verified ?'
+        verifiedSetupFees: 'Setup fees verified ?'
+
+    index:
+         title: 'List of Application'
+         filter : 'Filter'
+         reset: 'Reset'
+         new: 'New'
+         name: 'Name'
+         phoneNumber: 'Phone Number'
+         activated: 'Activated'
+         action: 'Action'
+         delete: 'Delete'
+    edit:
+        title: 'Edit Application'
+        delete: 'Delete'
+        edit: 'Edit'
+        return: 'List of Application'

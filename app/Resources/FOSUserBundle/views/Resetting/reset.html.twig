@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Reset you password{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 text-xs-center" style="margin-top: 100px;">
+            <div class="center-block text-xs-center" style="background-color: rgb(116, 158, 186) !important; border-radius: 10px;">Reset password</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            {% include "FOSUserBundle:Resetting:reset_content.html.twig" %}
+        </div>
+    </div>
+{% endblock body %}
